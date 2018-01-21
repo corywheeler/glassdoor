@@ -8,12 +8,14 @@ var glance = new Glance({
 // For now I'm going to rely on this as if I try to set the location, I get "Alpharetta, GAAlpharetta, GA"
 // and I'm not sure why. So for now, rely on the behavior I'm seeing.
 
+let companySectionCssSelector = '.eiHdrModule.module.snug';
 
 let companies = glance.url('http://glassdoor.com/')
     .click('Company Reviews#1')
     .click('Search company reviews and ratings > button')
     .click('LocationFilter')
     .click('Alpharetta, GA#1')
-    .get('.eiHdrModule.module.snug');
+    .get(companySectionCssSelector)
+    .end();
 
 console.log(companies)
