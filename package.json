@@ -11,5 +11,8 @@
     "Glassdoor"
   ],
   "author": "Cory Wheeler",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "glance-webdriver": "^0.8.5"
+  }
 }
